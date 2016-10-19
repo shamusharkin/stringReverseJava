@@ -34,10 +34,12 @@ public class Playlist {
         for (int i = 0; i < songList.size(); i++) {
             songNames[i] = songList.get(i).title;
         }
-        return songNames;
+//        return songNames;
 
 
-//        return songList.stream().map(song -> song.title).
+        return songList.stream()
+                .map(song -> song.title)
+                .toArray(String[]::new);
     }
 
     int totalDuration()
@@ -52,9 +54,9 @@ public class Playlist {
     void swap(Song a, Song b)
     {
         int aIndex = songList.indexOf(a);
-        songList.set( aIndex, b);
+        songList.set(aIndex, b);
         int bIndex = songList.indexOf(b);
-        songList.set( bIndex, a);
+        songList.set(bIndex, a);
     }
 
     void removeSong(Song aSong)
