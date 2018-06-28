@@ -26,4 +26,10 @@ public class ReverseString {
         System.out.println("reversed string " + this.str);
 
     }
+
+    public static String reverseWithStaticMethod(String str) {
+        //System.out.println("reversed string " + str);
+        return new StringBuilder(str).reverse().toString();
+
+    }
 }

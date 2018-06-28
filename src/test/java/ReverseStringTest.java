@@ -28,11 +28,16 @@ public class ReverseStringTest {
     }
 
     @Test
-    public void stringJoe_returnsEoj_UsingStringBuilderReverseMethod() {
+    public void stringShamus_returns_sumahS_UsingStringBuilderReverseMethod() {
         ReverseString str = new ReverseString("Shamus");
         str.reverseWithStringBuilderReverse();
         assertEquals("sumahS", str.getStr());
 
+    }
+
+    @Test
+    public void stringClare_returns_eralC_usingStaticMethod(){
+        assertEquals("eralC", ReverseString.reverseWithStaticMethod("Clare"));
     }
 
 }
