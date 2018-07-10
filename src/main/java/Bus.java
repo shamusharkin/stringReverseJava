@@ -33,7 +33,9 @@ public class Bus {
 
         int indexPassenger1 = 0;
         int indexPassenger2 = 0;
-        for (int i=0; i < passengers.length; i++) {
+
+        //only loop thru the number of elements in the array, not the size of the array
+        for (int i=0; i < (capacity - vacancies) -1; i++) {
             System.out.println(i);
             if(passengers[i].contains(passenger1.getName())) {
                 indexPassenger1 = i;
@@ -43,13 +45,10 @@ public class Bus {
             }
         }
 
-        String[] tempArray = new String[capacity];
-        for(int i=0; i < tempArray.length; i++){
-            tempArray[i] = passengers[i];
-        }
+        String temp = passengers[indexPassenger1];
 
-        passengers[indexPassenger1] = tempArray[indexPassenger2];
-        passengers[indexPassenger2] = tempArray[indexPassenger1];
+        passengers[indexPassenger1] = passengers[indexPassenger2];
+        passengers[indexPassenger2] = temp;
 
     }
 
