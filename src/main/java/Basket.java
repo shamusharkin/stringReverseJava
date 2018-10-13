@@ -1,12 +1,17 @@
 
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Basket {
     private String[][] books;
+    private List<String> listOfBooks;
     private static final int BOOK_PRICE_PER_UNIT = 8;
+
+    Basket(){
+//        BasketlistOfBooks = new int[10][10];
+//        listOfBooks = new ArrayList<>();
+//        listOfBooks.add(new ArrayList<>());
+    }
 
     Basket(String[] books) {
         Set<String> set = new HashSet<String>();
@@ -80,4 +85,16 @@ public class Basket {
         return totalPrice;
 
     }
+
+    public void addBook(String book) {
+        listOfBooks.add(book);
+    }
+
+//    public int getBasket() {
+//        return basket;
+//    }
+
+//    public String getPrice() {
+////        return price;
+//    }
 }

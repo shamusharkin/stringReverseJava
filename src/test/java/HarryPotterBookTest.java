@@ -61,34 +61,40 @@ public class HarryPotterBookTest {
 //        assertEquals(15.20, totalPrice);  junit depricated for double double, use hamcrest assertThat
         assertThat(totalPrice, equalTo(51.60));
     }
+    @Test
+    public void Testfrominternet() {
+
+        String[] books = {"Book1", "Book1", "Book1", "Book2", "Book2", "Book3", "Book3", "Book3",
+                "Book3", "Book4", "Book4", "Book5" };
+        Basket basket = new Basket(books);
+        double totalPrice = basket.getTotalPrice();
+
+//        assertEquals(15.20, totalPrice);  junit depricated for double double, use hamcrest assertThat
+        assertThat(totalPrice, equalTo(78.80));
+    }
 
 //    @Test
-//    public void null_returnsNull() {
-//        ReverseString str = new ReverseString(null);
+//    public void testAddBook() {
 //
-//        assertEquals(null, str.getStr());
+//        Basket basket = new Basket();
+//        basket.addBook("Book1");
+////        assertEquals(1, basket.getBasket());
 //
+////        assertEquals(15.20, totalPrice);  junit depricated for double double, use hamcrest assertThat
+//        assertThat(basket.getPrice(), equalTo(8));
 //    }
-//
-//    @Test
-//    public void stringJoe_returnsEoj_UsingStringBuilder() {
-//        ReverseString str = new ReverseString("Joe");
-//        str.reverseWithStringBuilder();
-//        assertEquals("eoJ", str.getStr());
-//
-//    }
-//
-//    @Test
-//    public void stringShamus_returns_sumahS_UsingStringBuilderReverseMethod() {
-//        ReverseString str = new ReverseString("Shamus");
-//        str.reverseWithStringBuilderReverse();
-//        assertEquals("sumahS", str.getStr());
-//
-//    }
-//
-//    @Test
-//    public void stringClare_returns_eralC_usingStaticMethod(){
-//        assertEquals("eralC", ReverseString.reverseWithStaticMethod("Clare"));
-//    }
+
+    @Test
+    public void anotherTestfrominternet() {
+
+        String[] books = {"Book1", "Book1", "Book1", "Book1", "Book1", "Book1", "Book2", "Book2",
+                "Book2", "Book2", "Book2", "Book2" };
+        Basket basket = new Basket(books);
+        double totalPrice = basket.getTotalPrice();
+
+//        assertEquals(15.20, totalPrice);  junit depricated for double double, use hamcrest assertThat
+        assertThat(totalPrice, equalTo(91.20));
+    }
+
 
 }
